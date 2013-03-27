@@ -238,7 +238,7 @@ int overlay_mdp_service_dnalookup(overlay_mdp_frame *mdp)
        immediately, so as not to cause blockages and delays in servald.
     */
     dna_helper_enqueue(mdp, did, mdp->out.src.sid);
-    monitor_tell_formatted(MONITOR_DNAHELPER, "LOOKUP:%s:%d:%s\n", 
+    monitor_tell_formatted(MONITOR_VOMP, "LOOKUP:%s:%d:%s\n", 
 			   alloca_tohex_sid(mdp->out.src.sid), mdp->out.src.port, 
 			   did);
   }
